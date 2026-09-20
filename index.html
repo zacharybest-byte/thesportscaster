@@ -65,14 +65,16 @@
   --ink-2:#1b1f29;
   --paper:#f2f5f7;
   --paper-dim:#9fb2bf;
-  --cream:#efe9e0;
   --accent:#e83151;
   --accent-lite:#f0708a;
   --quote-red:#c42741;
   --line:rgba(242,245,247,0.16);
 }
 *{box-sizing:border-box;}
+::selection{background:var(--accent);color:#fff;}
+.body,.story-body,.story-lede,.hero-lede,.quote-sub{text-wrap:pretty;}
 html{scroll-behavior:smooth;}
+#top,#trailer,#story,#follow{scroll-margin-top:74px;}
 body{margin:0;background:var(--ink);color:var(--paper);font-family:'Charter',Georgia,serif;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 h1,h2{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:0.01em;line-height:0.94;}
 p{margin:0;}
@@ -114,7 +116,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .spec-strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;padding-block:17px;}
 .spec-strip .label{color:var(--paper-dim);}
 .spec-strip .sep{opacity:.35;}
-.spec-strip .live{color:var(--accent-lite);}
+.spec-strip .live{color:var(--accent-lite);display:inline-flex;align-items:center;gap:8px;}
+.spec-strip .live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 3px rgba(232,49,81,0.22);animation:beat 2.6s ease-in-out infinite;}
+@keyframes beat{0%,100%{opacity:1;}50%{opacity:.35;}}
 
 .trailer-sec{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:clamp(52px,6vw,78px) 0 clamp(56px,6.4vw,84px);}
@@ -125,7 +130,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
 .story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
 .story-head h2{font-size:clamp(34px,4.5vw,64px);text-wrap:balance;}
-.story-head .script{font-family:'Caveat',"Segoe Script",cursive;text-transform:none;font-weight:700;
+.story-head .script{font-family:'Caveat',"Segoe Script",Georgia,serif;text-transform:none;font-weight:700;
+  font-style:italic;font-synthesis-style:none;
   font-size:1.34em;line-height:0.8;letter-spacing:0;}
 .story-head .rule{width:64px;height:4px;margin-bottom:22px;}
 .story-lede{font-size:clamp(19px,1.95vw,24px);line-height:1.5;letter-spacing:-0.005em;}
@@ -141,23 +147,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .band{position:relative;height:clamp(300px,34vw,480px);overflow:hidden;border-block:1px solid var(--line);}
 .band img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 
-.stats{background:var(--ink-2);border-bottom:1px solid var(--line);}
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);}
-.stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:clamp(30px,3.4vw,44px) 16px;}
-.stat-item + .stat-item{border-left:1px solid var(--line);}
-.stat-item .num{font-weight:900;font-size:clamp(36px,4vw,54px);line-height:1;}
-.stat-item .cap{font-size:16px;line-height:1.4;color:var(--paper-dim);}
-
 .quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0;}
 .quote .wrap{max-width:960px;text-align:center;}
-.quote-line{font-family:'Caveat',"Segoe Script","Bradley Hand",cursive;font-weight:700;
+.quote-line{font-family:'Caveat',"Segoe Script","Bradley Hand",Georgia,serif;font-weight:700;
+  font-style:italic;font-synthesis-style:none;
   font-size:clamp(36px,6.4vw,82px);line-height:1.1;letter-spacing:0;}
-.quote-sub{margin:24px auto 0;max-width:600px;font-size:clamp(16.5px,1.6vw,19px);line-height:1.6;color:#ffe2e7;}
+.quote-sub{margin:26px auto 0;max-width:620px;font-size:clamp(17px,1.7vw,20px);line-height:1.6;color:#ffe2e7;}
+.quote-div{width:54px;height:2px;background:rgba(255,255,255,0.45);margin:30px auto 0;}
 .quote-name{display:inline-block;margin-top:34px;padding:9px 20px;background:#fff;color:var(--quote-red);
   text-transform:uppercase;letter-spacing:0.16em;font-size:12px;font-weight:900;}
 
-.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px 40px;}
-.spec{border-top:1px solid var(--line);padding-top:15px;}
 .spec .label{font-size:11.5px;color:var(--paper-dim);}
 .spec .val{font-size:17.5px;margin-top:8px;}
 .spec .val.live{color:var(--accent-lite);}
@@ -172,7 +171,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .footer{padding:52px 0 36px;}
 .footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;}
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;}
-.footer-links a{color:var(--paper-dim);font-size:11.5px;}
+.footer-links a{color:var(--paper-dim);font-size:11.5px;transition:color .2s ease;}
 .footer-links a:hover{color:var(--paper);}
 .footer-links .ig-link{display:inline-flex;align-items:center;gap:7px;}
 .footer-links .ig-link svg{flex:none;}
@@ -198,19 +197,12 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .d1{animation-delay:.06s;}.d2{animation-delay:.18s;}.d3{animation-delay:.3s;}.d4{animation-delay:.42s;}
 @keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
-@media (max-width:860px){
-  .spec-grid{grid-template-columns:repeat(2,1fr);gap:26px 24px;}
-}
 @media (max-width:640px){
   .wrap{padding-inline:22px;}
   .hero{min-height:600px;padding:96px 0 0;}
   .hero-img{object-position:62% 20%;}
   .hero-title{font-size:min(10.6vw,46px);letter-spacing:-0.012em;}
   .nav-extra{display:none;}
-  .stat-row{grid-template-columns:1fr;}
-  .stat-item{flex-direction:row;align-items:center;justify-content:flex-start;gap:16px;text-align:left;padding:16px 0;}
-  .stat-item .num{min-width:86px;}
-  .stat-item + .stat-item{border-left:none;border-top:1px solid var(--line);}
   .follow-row{flex-direction:column;}
   .follow-row .btn,.follow-row .field{width:100%;max-width:none;}
   .band{height:clamp(240px,58vw,300px);}
@@ -218,6 +210,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .rise{animation:none;opacity:1;transform:none;}
+  .spec-strip .live::before{animation:none;}
 }
 </style>
 </head>
@@ -307,17 +300,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <img src="assets/img/band.jpg" alt="Malcom Harris-Gowdie and Christy Weir on Super Bowl media row" width="1800" height="1013" loading="lazy">
   </div>
 
-
   <section class="quote" aria-label="Malcom Harris-Gowdie, in his own words">
     <div class="wrap">
       <blockquote style="margin:0;">
         <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
+        <div class="quote-div"></div>
         <p class="quote-sub">I know my stuff. I have the knowledge of the game inside and out.</p>
       </blockquote>
       <div class="quote-name">Malcom Harris-Gowdie</div>
     </div>
   </section>
-
 
   <section id="follow" class="follow">
     <div class="wrap narrow" style="text-align:center;">
