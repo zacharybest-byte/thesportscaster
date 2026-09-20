@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://thesportscasterfilm.com/</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://thesportscasterfilm.com/assets/img/hero-desktop.jpg</image:loc>
+      <image:title>Malcom Harris-Gowdie at Super Bowl Media Week</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thesportscasterfilm.com/assets/img/band.jpg</image:loc>
+      <image:title>Malcom Harris-Gowdie and Christy Weir on Super Bowl media row</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thesportscasterfilm.com/assets/img/trailer-card.jpg</image:loc>
+      <image:title>The Sportscaster official trailer title card</image:title>
+    </image:image>
   </url>
 </urlset>

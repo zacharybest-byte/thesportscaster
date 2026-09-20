@@ -4,24 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>The Sportscaster — a documentary film</title>
-<meta name="description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his. A FanSided documentary following Special Olympics athlete and reporter Malcom Harris-Gowdie through Super Bowl Media Week.">
+<title>The Sportscaster — A Documentary About Malcom Harris-Gowdie</title>
+<meta name="description" content="Special Olympics athlete Malcom Harris-Gowdie has covered four Super Bowls as a reporter. A FanSided documentary about the job he is still waiting for.">
 <link rel="canonical" href="https://thesportscasterfilm.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#14161c">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Sportscaster">
 <meta property="og:url" content="https://thesportscasterfilm.com/">
-<meta property="og:title" content="The Sportscaster — a documentary film">
+<meta property="og:title" content="The Sportscaster — A Documentary About Malcom Harris-Gowdie">
 <meta property="og:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
 <meta property="og:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:locale" content="en_US">
 <meta property="og:image:alt" content="The Sportscaster — Malcom Harris-Gowdie at Super Bowl Media Week, surrounded by camera crews">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Sportscaster — a documentary film">
+<meta name="twitter:title" content="The Sportscaster — A Documentary About Malcom Harris-Gowdie">
 <meta name="twitter:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
 <meta name="twitter:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
+<meta name="twitter:image:alt" content="Malcom Harris-Gowdie at Super Bowl Media Week, surrounded by camera crews">
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/icon-512.png" type="image/png">
@@ -36,23 +40,61 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Movie",
-  "name": "The Sportscaster",
-  "genre": "Documentary",
-  "duration": "PT55M",
-  "inLanguage": "en",
-  "countryOfOrigin": "US",
-  "url": "https://thesportscasterfilm.com/",
-  "image": "https://thesportscasterfilm.com/assets/img/og-image.jpg",
-  "description": "A FanSided documentary following Special Olympics athlete and reporter Malcom Harris-Gowdie through Super Bowl Media Week.",
-  "director": { "@type": "Person", "name": "Hunter Armor" },
-  "producer": [
-    { "@type": "Person", "name": "Hunter Armor" },
-    { "@type": "Person", "name": "Patrick Allen" },
-    { "@type": "Person", "name": "Zachary Best" },
-    { "@type": "Person", "name": "Christy Weir" }
-  ],
-  "productionCompany": { "@type": "Organization", "name": "FanSided" }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://thesportscasterfilm.com/#website",
+      "url": "https://thesportscasterfilm.com/",
+      "name": "The Sportscaster",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://thesportscasterfilm.com/#fansided" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://thesportscasterfilm.com/#fansided",
+      "name": "FanSided",
+      "url": "https://www.fansided.com/",
+      "email": "press@fansided.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thesportscasterfilm.com/#malcom",
+      "name": "Malcom Harris-Gowdie",
+      "jobTitle": "Sports reporter",
+      "description": "Special Olympics athlete and sports reporter who has covered four Super Bowls for FanSided. He has autism and cerebral palsy.",
+      "affiliation": [
+        { "@id": "https://thesportscasterfilm.com/#fansided" },
+        { "@type": "Organization", "name": "Special Olympics", "url": "https://www.specialolympics.org/" }
+      ]
+    },
+    {
+      "@type": "Movie",
+      "@id": "https://thesportscasterfilm.com/#movie",
+      "name": "The Sportscaster",
+      "alternateName": "The Sportscaster documentary",
+      "genre": ["Documentary", "Sports"],
+      "duration": "PT55M",
+      "inLanguage": "en",
+      "countryOfOrigin": "US",
+      "url": "https://thesportscasterfilm.com/",
+      "mainEntityOfPage": { "@id": "https://thesportscasterfilm.com/#website" },
+      "image": "https://thesportscasterfilm.com/assets/img/og-image.jpg",
+      "description": "A FanSided documentary following Special Olympics athlete and reporter Malcom Harris-Gowdie through Super Bowl Media Week.",
+      "about": { "@id": "https://thesportscasterfilm.com/#malcom" },
+      "creativeWorkStatus": "Completed",
+      "copyrightYear": 2026,
+      "copyrightHolder": { "@id": "https://thesportscasterfilm.com/#fansided" },
+      "sameAs": ["https://www.instagram.com/thesportscasterfilm/"],
+      "director": { "@type": "Person", "name": "Hunter Armor" },
+      "producer": [
+        { "@type": "Person", "name": "Hunter Armor" },
+        { "@type": "Person", "name": "Patrick Allen" },
+        { "@type": "Person", "name": "Zachary Best" },
+        { "@type": "Person", "name": "Christy Weir" }
+      ],
+      "productionCompany": { "@id": "https://thesportscasterfilm.com/#fansided" }
+    }
+  ]
 }
 </script>
 
@@ -126,6 +168,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   padding:clamp(52px,6vw,78px) 0 clamp(56px,6.4vw,84px);}
 .trailer-head{text-align:center;margin-bottom:clamp(24px,2.8vw,34px);}
 .trailer-head .rule{width:34px;height:2px;margin:0 auto 14px;}
+.trailer-head h2{font-weight:400;font-size:12.5px;line-height:1.5;letter-spacing:0.15em;color:var(--paper-dim);}
 .frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid rgba(242,245,247,0.22);
   box-shadow:0 26px 60px rgba(0,0,0,0.45);}
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
@@ -260,7 +303,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <span class="label" style="letter-spacing:0.4em;font-size:clamp(12px,1.2vw,14px);padding-left:0.4em;">The</span>
         <span class="line"></span>
       </div>
-      <h1 class="hero-title rise d2">Sportscaster</h1>
+      <h1 class="hero-title rise d2"><span class="vh">The </span>Sportscaster</h1>
       <p class="hero-lede rise d3">He came to the <span class="nb">Super Bowl</span> to tell their stories.<br>
         The story you won&rsquo;t forget is his.</p>
       <a href="#story" class="btn btn-solid rise d4" style="margin-top:30px;">Read the synopsis</a>
@@ -282,7 +325,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <section id="trailer" class="trailer-sec" aria-label="Trailer">
     <div class="wrap trailer-head">
       <div class="rule"></div>
-      <span class="label" style="color:var(--paper-dim);">Trailer &middot; dropping soon</span>
+      <h2 class="label">Trailer<span class="vh"> for The Sportscaster</span> &middot; dropping soon</h2>
     </div>
     <div class="wrap">
     <div class="frame">
@@ -318,8 +361,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <img src="assets/img/band.jpg" alt="Malcom Harris-Gowdie and Christy Weir on Super Bowl media row" width="1800" height="1013" loading="lazy">
   </div>
 
-  <section class="quote" aria-label="Malcom Harris-Gowdie, in his own words">
+  <section class="quote" aria-labelledby="quote-h">
     <div class="wrap">
+      <h2 id="quote-h" class="vh">Malcom Harris-Gowdie, in his own words</h2>
       <blockquote style="margin:0;">
         <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
         <div class="quote-div"></div>
