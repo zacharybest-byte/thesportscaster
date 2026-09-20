@@ -124,15 +124,17 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   box-shadow:0 26px 60px rgba(0,0,0,0.45);}
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
 .story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
-.story-head h2{font-size:clamp(30px,3.6vw,50px);text-wrap:balance;}
-.story-head .rule{margin-bottom:20px;}
+.story-head h2{font-size:clamp(34px,4.5vw,64px);text-wrap:balance;}
+.story-head .script{font-family:'Caveat',"Segoe Script",cursive;text-transform:none;font-weight:700;
+  font-size:1.34em;line-height:0.8;letter-spacing:0;}
+.story-head .rule{width:64px;height:4px;margin-bottom:22px;}
 .story-lede{font-size:clamp(19px,1.95vw,24px);line-height:1.5;letter-spacing:-0.005em;}
 .story-lede .key{color:var(--accent-lite);}
 .story-body{margin-top:20px;font-size:17px;line-height:1.75;color:var(--paper-dim);max-width:60ch;}
 .story-body .title{color:var(--paper);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;font-size:16px;}
 @media (max-width:860px){
   .story-grid{grid-template-columns:1fr;gap:26px;}
-  .story-head h2{font-size:clamp(28px,7.2vw,40px);}
+  .story-head h2{font-size:clamp(30px,8vw,44px);}
 }
 .frame img{width:100%;height:100%;object-fit:cover;}
 
@@ -172,6 +174,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;}
 .footer-links a{color:var(--paper-dim);font-size:11.5px;}
 .footer-links a:hover{color:var(--paper);}
+.footer-links .ig-link{display:inline-flex;align-items:center;gap:7px;}
+.footer-links .ig-link svg{flex:none;}
+.fs-mark{display:block;opacity:0.34;transition:opacity .2s ease;}
+.fs-mark:hover,.fs-mark:focus-visible{opacity:0.62;}
 
 /* Billing block — the condensed credit slate from a one-sheet. */
 .billing{width:100%;max-width:1020px;margin:0 auto;padding-top:26px;border-top:1px solid var(--line);}
@@ -225,7 +231,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <nav class="nav-links" aria-label="Primary">
       <a class="label nav-extra" href="#story">Synopsis</a>
       <a class="label nav-extra" href="#trailer">Trailer</a>
-      <a class="label" href="mailto:press@fansided.com">Press</a>
     </nav>
   </div>
 </header>
@@ -279,7 +284,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="wrap story-grid">
       <div class="story-head">
         <div class="rule"></div>
-        <h2>Every voice deserves to be heard</h2>
+        <h2>Every voice deserves to be <span class="script">heard</span></h2>
       </div>
       <div>
         <p class="story-lede">
@@ -338,11 +343,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <div class="wrap">
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
       <span class="label" style="font-size:11.5px;color:var(--paper-dim);">A film by</span>
-      <img src="assets/img/fansided.png" alt="FanSided" width="170" height="37" style="width:170px;height:auto;opacity:0.34;" loading="lazy">
+      <a href="https://www.fansided.com" target="_blank" rel="noopener" aria-label="FanSided (opens in a new tab)" class="fs-mark">
+        <img src="assets/img/fansided.png" alt="FanSided" width="170" height="37" style="width:170px;height:auto;" loading="lazy">
+      </a>
     </div>
     <div class="footer-links">
       <a class="label" href="mailto:press@fansided.com">press@fansided.com</a>
-      <a class="label" href="https://www.instagram.com/thesportscasterfilm/" target="_blank" rel="noopener">@thesportscasterfilm</a>
+      <a class="label ig-link" href="https://www.instagram.com/thesportscasterfilm/" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle>
+        </svg>
+        @thesportscasterfilm</a>
     </div>
 
     <div class="billing">
