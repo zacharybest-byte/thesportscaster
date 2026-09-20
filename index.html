@@ -174,10 +174,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   box-shadow:0 26px 60px rgba(0,0,0,0.45);}
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
 .story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
-.story-head h2{font-size:clamp(34px,4.5vw,64px);text-wrap:balance;}
-.story-head .script{font-family:'Caveat',"Segoe Script",Georgia,serif;text-transform:none;font-weight:700;
-  font-style:italic;font-synthesis-style:none;
-  font-size:1.34em;line-height:0.8;letter-spacing:0;}
+.story-head h2{font-size:clamp(38px,5.4vw,78px);line-height:0.9;letter-spacing:-0.005em;}
+.story-head .script{font-family:'Caveat',"Segoe Script",Georgia,serif;text-transform:none;font-weight:700;font-style:italic;font-synthesis-style:none;font-size:1.5em;line-height:0.78;letter-spacing:0;color:var(--accent-lite);display:inline-block;margin-top:0.1em;}
 .story-head .rule{width:64px;height:4px;margin-bottom:22px;}
 .story-lede{font-size:clamp(19px,1.95vw,24px);line-height:1.5;letter-spacing:-0.005em;}
 .story-lede .key{color:var(--accent-lite);}
@@ -188,7 +186,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 }
 @media (max-width:860px){
   .story-grid{grid-template-columns:1fr;gap:26px;}
-  .story-head h2{font-size:clamp(30px,8vw,44px);}
+  .story-head h2{font-size:clamp(34px,9vw,50px);}
 }
 .frame img{width:100%;height:100%;object-fit:cover;}
 
@@ -339,7 +337,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="wrap story-grid">
       <div class="story-head">
         <div class="rule"></div>
-        <h2>Every voice deserves to be <span class="script">heard</span></h2>
+        <h2>He knows<br>the game.<br>Now hear<br>
+          <span class="script">his story.</span></h2>
       </div>
       <div>
         <p class="story-lede">
