@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <title>The Sportscaster — a documentary film</title>
-<meta name="description" content="On football's biggest stage, Malcom Harris-Gowdie is redefining who gets to hold the microphone. A FanSided documentary following the Special Olympics athlete and reporter through Super Bowl Media Week.">
+<meta name="description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his. A FanSided documentary following Special Olympics athlete and reporter Malcom Harris-Gowdie through Super Bowl Media Week.">
 <link rel="canonical" href="https://thesportscasterfilm.com/">
 <meta name="theme-color" content="#14161c">
 
@@ -13,14 +13,14 @@
 <meta property="og:site_name" content="The Sportscaster">
 <meta property="og:url" content="https://thesportscasterfilm.com/">
 <meta property="og:title" content="The Sportscaster — a documentary film">
-<meta property="og:description" content="On football's biggest stage, Malcom Harris-Gowdie is redefining who gets to hold the microphone.">
+<meta property="og:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
 <meta property="og:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Sportscaster — Malcom Harris-Gowdie holding a Special Olympics and FanSided microphone">
+<meta property="og:image:alt" content="The Sportscaster — Malcom Harris-Gowdie at Super Bowl Media Week, surrounded by camera crews">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Sportscaster — a documentary film">
-<meta name="twitter:description" content="On football's biggest stage, Malcom Harris-Gowdie is redefining who gets to hold the microphone.">
+<meta name="twitter:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
 <meta name="twitter:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
 
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -39,7 +39,7 @@
   "@type": "Movie",
   "name": "The Sportscaster",
   "genre": "Documentary",
-  "duration": "PT55M7S",
+  "duration": "PT55M",
   "inLanguage": "en",
   "countryOfOrigin": "US",
   "url": "https://thesportscasterfilm.com/",
@@ -105,13 +105,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
 .hero{position:relative;min-height:820px;display:flex;flex-direction:column;justify-content:flex-end;padding:140px 0 0;overflow:hidden;}
 .hero picture{position:absolute;inset:0;}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;}
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,28,0.66) 0%,rgba(20,22,28,0.08) 26%,rgba(20,22,28,0.90) 72%,var(--ink) 100%);}
 .hero-content{position:relative;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:56px;}
 .hero-kicker{display:inline-flex;align-items:center;gap:15px;margin-bottom:14px;}
 .hero-kicker span.line{width:clamp(30px,4.5vw,56px);height:2px;background:var(--accent);}
 .hero-title{font-size:clamp(44px,9.2vw,122px);}
-.hero-lede{margin-top:22px;max-width:580px;font-size:clamp(17px,1.7vw,20px);line-height:1.5;}
+.nb{white-space:nowrap;}
+.hero-lede{margin-top:22px;max-width:620px;font-size:clamp(17.5px,1.85vw,22px);line-height:1.45;text-wrap:balance;}
 .spec-strip{position:relative;border-top:1px solid var(--line);}
 .spec-strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;padding-block:17px;}
 .spec-strip .label{color:var(--paper-dim);}
@@ -138,13 +139,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .story-lede .key{color:var(--accent-lite);}
 .story-body{margin-top:20px;font-size:17px;line-height:1.75;color:var(--paper-dim);max-width:60ch;}
 .story-body .title{color:var(--paper);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;font-size:16px;}
+@media (max-width:900px){
+  .follow-grid{grid-template-columns:1fr;gap:32px;}
+}
 @media (max-width:860px){
   .story-grid{grid-template-columns:1fr;gap:26px;}
   .story-head h2{font-size:clamp(30px,8vw,44px);}
 }
 .frame img{width:100%;height:100%;object-fit:cover;}
 
-.band{position:relative;height:clamp(300px,34vw,480px);overflow:hidden;border-block:1px solid var(--line);}
+.band{position:relative;height:clamp(300px,34vw,480px);overflow:hidden;background:var(--ink);border-top:6px solid var(--accent);border-bottom:1px solid var(--line);padding-top:14px;}
 .band img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 
 .quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0;}
@@ -161,11 +165,24 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .spec .val{font-size:17.5px;margin-top:8px;}
 .spec .val.live{color:var(--accent-lite);}
 
-.follow{border-top:1px solid var(--line);background:var(--ink-2);padding:clamp(58px,6.5vw,84px) 0;}
-.follow-row{display:flex;gap:10px;justify-content:center;margin-top:26px;flex-wrap:wrap;}
-.field{width:100%;max-width:300px;min-height:52px;padding:0 18px;border:1px solid rgba(242,245,247,0.35);background:rgba(242,245,247,0.06);color:var(--paper);font-family:'Charter',Georgia,serif;font-size:16px;}
+.follow{border-top:1px solid var(--line);background:var(--ink-2);padding:clamp(64px,7.5vw,100px) 0;}
+.follow-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:clamp(32px,5vw,72px);align-items:start;}
+.follow-head .rule{width:64px;height:4px;margin-bottom:22px;}
+.follow-head h2{font-size:clamp(30px,3.9vw,52px);text-wrap:balance;}
+.follow-head .body{margin-top:18px;max-width:46ch;}
+.follow-contact{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+.follow-contact .label{display:block;color:var(--paper-dim);font-size:11.5px;margin-bottom:8px;}
+.follow-contact a{font-size:18px;border-bottom:1px solid rgba(232,49,81,0.55);padding-bottom:2px;transition:border-color .2s ease,color .2s ease;}
+.follow-contact a:hover{color:var(--accent-lite);border-bottom-color:var(--accent-lite);}
+
+.signup-card{background:rgba(242,245,247,0.045);border:1px solid var(--line);padding:clamp(24px,2.6vw,32px);}
+.signup-card .label{display:block;color:var(--paper-dim);font-size:11.5px;margin-bottom:16px;}
+.follow-row{display:flex;flex-direction:column;gap:10px;}
+.field{width:100%;min-height:54px;padding:0 18px;border:1px solid rgba(242,245,247,0.35);background:rgba(20,22,28,0.55);color:var(--paper);font-family:'Charter',Georgia,serif;font-size:16px;}
 .field::placeholder{color:var(--paper-dim);}
-.form-note{margin-top:14px;font-size:12.5px;color:var(--paper-dim);min-height:1.2em;}
+.field:focus{border-color:var(--paper);outline:none;}
+.follow-row .btn{width:100%;min-height:54px;}
+.form-note{margin-top:12px;font-size:12.5px;color:var(--paper-dim);min-height:1.2em;}
 .form-privacy{margin-top:2px;font-size:12.5px;line-height:1.6;color:#8fa3b1;}
 
 .footer{padding:52px 0 36px;}
@@ -200,11 +217,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media (max-width:640px){
   .wrap{padding-inline:22px;}
   .hero{min-height:600px;padding:96px 0 0;}
-  .hero-img{object-position:62% 20%;}
+  .hero-img{object-position:center 26%;}
   .hero-title{font-size:min(10.6vw,46px);letter-spacing:-0.012em;}
   .nav-extra{display:none;}
-  .follow-row{flex-direction:column;}
-  .follow-row .btn,.follow-row .field{width:100%;max-width:none;}
+  .follow-grid{grid-template-columns:1fr;gap:30px;}
+  .follow-head h2{font-size:clamp(28px,8vw,40px);}
   .band{height:clamp(240px,58vw,300px);}
 }
 @media (prefers-reduced-motion:reduce){
@@ -233,7 +250,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <section id="top" class="hero" aria-label="The Sportscaster">
     <picture>
       <source media="(max-width:640px)" srcset="assets/img/hero-mobile.jpg">
-      <img class="hero-img" src="assets/img/hero-desktop.jpg" alt="Malcom Harris-Gowdie at Super Bowl Media Week, wearing a Special Olympics jacket beside his FanSided microphone" fetchpriority="high" width="2000" height="1125">
+      <img class="hero-img" src="assets/img/hero-desktop.jpg" alt="Malcom Harris-Gowdie on the floor at Super Bowl Media Week, surrounded by camera operators, his Special Olympics and FanSided microphone in hand" fetchpriority="high" width="1800" height="1012">
     </picture>
     <div class="hero-scrim"></div>
 
@@ -244,7 +261,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <span class="line"></span>
       </div>
       <h1 class="hero-title rise d2">Sportscaster</h1>
-      <p class="hero-lede rise d3">On football&rsquo;s biggest stage, Malcom Harris-Gowdie is redefining who gets to hold the microphone.</p>
+      <p class="hero-lede rise d3">He came to the <span class="nb">Super Bowl</span> to tell their stories.<br>
+        The story you won&rsquo;t forget is his.</p>
       <a href="#story" class="btn btn-solid rise d4" style="margin-top:30px;">Read the synopsis</a>
     </div>
 
@@ -312,21 +330,35 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   </section>
 
   <section id="follow" class="follow">
-    <div class="wrap narrow" style="text-align:center;">
-      <h2 style="font-size:clamp(25px,3.1vw,38px);">Follow the film</h2>
-      <p class="body" style="margin-top:14px;">Finished and out to festivals. Get the trailer, festival dates and release news as they land.</p>
+    <div class="wrap follow-grid">
 
-      <!-- ===================================================================
-           SAILTHRU: replace SAILTHRU_ENDPOINT below with the real form URL.
-           Until it is replaced, the form falls back to opening an email.
-           =================================================================== -->
-      <form class="follow-row" id="signup" action="SAILTHRU_ENDPOINT" method="post">
-        <label for="email" class="vh">Email address</label>
-        <input id="email" name="email" class="field" type="email" placeholder="you@email.com" required autocomplete="email">
-        <button type="submit" class="btn btn-solid">Sign up</button>
-      </form>
-      <p class="form-note" id="form-note" role="status"></p>
-      <p class="form-privacy">Trailer, festival dates and release news. No spam, and we never share your address.</p>
+      <div class="follow-head">
+        <div class="rule"></div>
+        <h2>Follow the film</h2>
+        <p class="body">Finished and out to festivals. The trailer, premiere dates and release news go out here first.</p>
+
+        <div class="follow-contact">
+          <span class="label">Press &amp; festival programmers</span>
+          <a href="mailto:press@fansided.com">press@fansided.com</a>
+        </div>
+      </div>
+
+      <div class="signup-card">
+        <span class="label">Get the updates</span>
+
+        <!-- ===================================================================
+             SAILTHRU: replace SAILTHRU_ENDPOINT below with the real form URL.
+             Until it is replaced, the form falls back to opening an email.
+             =================================================================== -->
+        <form class="follow-row" id="signup" action="SAILTHRU_ENDPOINT" method="post">
+          <label for="email" class="vh">Email address</label>
+          <input id="email" name="email" class="field" type="email" placeholder="you@email.com" required autocomplete="email">
+          <button type="submit" class="btn btn-solid">Sign up</button>
+        </form>
+        <p class="form-note" id="form-note" role="status"></p>
+        <p class="form-privacy">Trailer, festival dates and release news. No spam, and we never share your address.</p>
+      </div>
+
     </div>
   </section>
 </main>
@@ -357,7 +389,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <span class="role">Executive Producer</span> Zachary Best
         <span class="role">Associate Producer</span> Christy Weir
         <span class="role">Directed by</span> Hunter Armor</p>
-      <p class="legal"><em>The Sportscaster</em> is a production of FanSided. Running time 55:07.
+      <p class="legal"><em>The Sportscaster</em> is a production of FanSided. Running time 55 minutes.
         &copy; 2026 FanSided LLC. All Rights Reserved.</p>
     </div>
   </div>
