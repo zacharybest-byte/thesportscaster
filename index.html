@@ -23,15 +23,15 @@
 <meta name="twitter:description" content="On football's biggest stage, Malcom Harris-Gowdie is redefining who gets to hold the microphone.">
 <meta name="twitter:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
 
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/assets/img/icon-512.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/icon-512.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-<link rel="preload" href="/assets/fonts/charter-black.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/charter-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/charter-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/charter-roman.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Pathway+Gothic+One&display=swap">
 
 <script type="application/ld+json">
 {
@@ -57,8 +57,8 @@
 </script>
 
 <style>
-@font-face{font-family:'Charter';src:url('/assets/fonts/charter-roman.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
-@font-face{font-family:'Charter';src:url('/assets/fonts/charter-black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Charter';src:url('assets/fonts/charter-roman.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Charter';src:url('assets/fonts/charter-black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap;}
 
 :root{
   --ink:#14161c;
@@ -68,6 +68,7 @@
   --cream:#efe9e0;
   --accent:#e83151;
   --accent-lite:#f0708a;
+  --quote-red:#c42741;
   --line:rgba(242,245,247,0.16);
 }
 *{box-sizing:border-box;}
@@ -115,7 +116,24 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .spec-strip .sep{opacity:.35;}
 .spec-strip .live{color:var(--accent-lite);}
 
-.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;border-block:1px solid var(--line);}
+.trailer-sec{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:clamp(52px,6vw,78px) 0 clamp(56px,6.4vw,84px);}
+.trailer-head{text-align:center;margin-bottom:clamp(24px,2.8vw,34px);}
+.trailer-head .rule{width:34px;height:2px;margin:0 auto 14px;}
+.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid rgba(242,245,247,0.22);
+  box-shadow:0 26px 60px rgba(0,0,0,0.45);}
+.story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
+.story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
+.story-head h2{font-size:clamp(30px,3.6vw,50px);text-wrap:balance;}
+.story-head .rule{margin-bottom:20px;}
+.story-lede{font-size:clamp(19px,1.95vw,24px);line-height:1.5;letter-spacing:-0.005em;}
+.story-lede .key{color:var(--accent-lite);}
+.story-body{margin-top:20px;font-size:17px;line-height:1.75;color:var(--paper-dim);max-width:60ch;}
+.story-body .title{color:var(--paper);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;font-size:16px;}
+@media (max-width:860px){
+  .story-grid{grid-template-columns:1fr;gap:26px;}
+  .story-head h2{font-size:clamp(28px,7.2vw,40px);}
+}
 .frame img{width:100%;height:100%;object-fit:cover;}
 
 .band{position:relative;height:clamp(240px,26vw,380px);overflow:hidden;border-block:1px solid var(--line);}
@@ -128,10 +146,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .stat-item .num{font-weight:900;font-size:clamp(36px,4vw,54px);line-height:1;}
 .stat-item .cap{font-size:16px;line-height:1.4;color:var(--paper-dim);}
 
-.quote{background:var(--cream);color:var(--ink);padding:clamp(64px,7.5vw,104px) 0;}
-.quote .wrap{max-width:940px;text-align:center;}
-.quote-line{font-family:'Bodoni Moda',Didot,Georgia,serif;font-style:italic;font-size:clamp(27px,4.2vw,56px);line-height:1.16;letter-spacing:-0.01em;}
-.quote-sub{margin:26px auto 0;max-width:600px;font-size:clamp(16.5px,1.6vw,19px);line-height:1.65;color:#4a4740;}
+.quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0;}
+.quote .wrap{max-width:960px;text-align:center;}
+.quote-line{font-family:'Caveat',"Segoe Script","Bradley Hand",cursive;font-weight:700;
+  font-size:clamp(36px,6.4vw,82px);line-height:1.1;letter-spacing:0;}
+.quote-sub{margin:24px auto 0;max-width:600px;font-size:clamp(16.5px,1.6vw,19px);line-height:1.6;color:#ffe2e7;}
+.quote-name{display:inline-block;margin-top:34px;padding:9px 20px;background:#fff;color:var(--quote-red);
+  text-transform:uppercase;letter-spacing:0.16em;font-size:12px;font-weight:900;}
 
 .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px 40px;}
 .spec{border-top:1px solid var(--line);padding-top:15px;}
@@ -150,6 +171,21 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;}
 .footer-links a{color:var(--paper-dim);font-size:11.5px;}
 .footer-links a:hover{color:var(--paper);}
+
+/* Billing block — the condensed credit slate from a one-sheet. */
+.billing{width:100%;max-width:1020px;margin:0 auto;padding-top:26px;border-top:1px solid var(--line);}
+.billing p{font-family:'Pathway Gothic One','Oswald','Arial Narrow',sans-serif;
+  text-transform:uppercase;color:#7f929f;font-size:clamp(14px,1.55vw,20px);line-height:1.3;
+  letter-spacing:0.015em;word-spacing:0.14em;margin:0;}
+.billing .role{font-size:0.8em;letter-spacing:0.03em;}
+.billing .legal{font-family:'Charter',Georgia,serif;text-transform:none;font-size:11px;line-height:1.6;
+  letter-spacing:0;word-spacing:normal;color:var(--paper-dim);opacity:.78;margin-top:16px;max-width:760px;
+  margin-inline:auto;}
+.billing .legal em{font-style:italic;}
+@media (max-width:640px){
+  .billing p{font-size:13px;line-height:1.35;}
+  .billing .legal{font-size:10.5px;}
+}
 
 .rise{animation:rise .95s cubic-bezier(.16,.84,.34,1) both;}
 .d1{animation-delay:.06s;}.d2{animation-delay:.18s;}.d3{animation-delay:.3s;}.d4{animation-delay:.42s;}
@@ -187,7 +223,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <a class="nav-mark" href="#top">The Sportscaster</a>
     <nav class="nav-links" aria-label="Primary">
       <a class="label nav-extra" href="#story">Synopsis</a>
-      <a class="label nav-extra" href="#facts">The film</a>
+      <a class="label nav-extra" href="#trailer">Trailer</a>
       <a class="label" href="mailto:press@fansided.com">Press</a>
     </nav>
   </div>
@@ -197,8 +233,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
   <section id="top" class="hero" aria-label="The Sportscaster">
     <picture>
-      <source media="(max-width:640px)" srcset="/assets/img/hero-mobile.jpg">
-      <img class="hero-img" src="/assets/img/hero-desktop.jpg" alt="Malcom Harris-Gowdie at Super Bowl Media Week, wearing a Special Olympics jacket beside his FanSided microphone" fetchpriority="high" width="2000" height="1125">
+      <source media="(max-width:640px)" srcset="assets/img/hero-mobile.jpg">
+      <img class="hero-img" src="assets/img/hero-desktop.jpg" alt="Malcom Harris-Gowdie at Super Bowl Media Week, wearing a Special Olympics jacket beside his FanSided microphone" fetchpriority="high" width="2000" height="1125">
     </picture>
     <div class="hero-scrim"></div>
 
@@ -226,80 +262,56 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     </div>
   </section>
 
-  <section id="trailer" style="padding:64px 0 0;" aria-label="Trailer">
-    <div class="wrap" style="text-align:center;margin-bottom:26px;">
-      <span class="label" style="color:var(--paper-dim);">Trailer &middot; coming soon</span>
+  <section id="trailer" class="trailer-sec" aria-label="Trailer">
+    <div class="wrap trailer-head">
+      <div class="rule"></div>
+      <span class="label" style="color:var(--paper-dim);">Trailer &middot; dropping soon</span>
     </div>
+    <div class="wrap">
     <div class="frame">
-      <img src="/assets/img/trailer-card.jpg" alt="The Sportscaster title card: Malcom Harris-Gowdie holding a Special Olympics and FanSided microphone" width="1280" height="720" loading="lazy">
+      <img src="assets/img/trailer-card.jpg" alt="The Sportscaster title card: Malcom Harris-Gowdie holding a Special Olympics and FanSided microphone" width="1280" height="720" loading="lazy">
+    </div>
     </div>
   </section>
 
-  <section id="story" style="padding:clamp(58px,6.5vw,86px) 0 clamp(52px,6vw,76px);">
-    <div class="wrap narrow" style="text-align:center;">
-      <div class="rule" style="margin:0 auto 24px;"></div>
-      <h2 style="font-size:clamp(26px,3.3vw,42px);">Every voice deserves to be heard</h2>
-      <p style="margin-top:22px;font-size:clamp(17px,1.7vw,20px);line-height:1.6;">
-        For four years, FanSided has worked alongside Special Olympics athlete Malcom Harris-Gowdie &mdash; a
-        reporter with autism and cerebral palsy whose recall of sports statistics is his superpower.
-      </p>
-      <p class="body" style="margin-top:16px;">
-        <span style="color:var(--paper);">The Sportscaster</span> follows Malcom at Super Bowl Media Week as he
-        interviews some of football&rsquo;s biggest names &mdash; celebrating his talent, determination and passion, and
-        reinforcing that everyone deserves the opportunity to participate, pursue their passions, and be heard.
-      </p>
+  <section id="story" class="story">
+    <div class="wrap story-grid">
+      <div class="story-head">
+        <div class="rule"></div>
+        <h2>Every voice deserves to be heard</h2>
+      </div>
+      <div>
+        <p class="story-lede">
+          Malcom Harris-Gowdie has autism and cerebral palsy, and a recall of sports statistics he calls
+          <span class="key">his superpower</span>. For four years he has reported for FanSided alongside
+          Special Olympics.
+        </p>
+        <p class="story-body">
+          <span class="title">The Sportscaster</span> follows Malcom through Super Bowl Media Week as he works
+          the scrum for his questions and interviews some of football&rsquo;s biggest names &mdash; George Kittle,
+          Christian McCaffrey, Baker Mayfield. It is his fourth Super Bowl, and he has yet to be offered a
+          full-time job in the industry. A film about a reporter who is already doing the work, waiting on
+          someone to open the door.
+        </p>
+      </div>
     </div>
   </section>
 
   <div class="band">
-    <img src="/assets/img/band.jpg" alt="Malcom Harris-Gowdie and Christy Weir on Super Bowl media row" width="1800" height="1013" loading="lazy">
+    <img src="assets/img/band.jpg" alt="Malcom Harris-Gowdie and Christy Weir on Super Bowl media row" width="1800" height="1013" loading="lazy">
   </div>
 
-  <section class="stats" aria-label="By the numbers">
-    <div class="wrap stat-row">
-      <div class="stat-item">
-        <span class="num">4</span>
-        <span class="cap">Super Bowls covered</span>
-      </div>
-      <div class="stat-item">
-        <span class="num">100+</span>
-        <span class="cap">Interviews on media row</span>
-      </div>
-      <div class="stat-item">
-        <span class="num">2006</span>
-        <span class="cap">A Special Olympics athlete since</span>
-      </div>
-    </div>
-  </section>
 
   <section class="quote" aria-label="Malcom Harris-Gowdie, in his own words">
     <div class="wrap">
-      <div class="rule" style="margin:0 auto 30px;"></div>
       <blockquote style="margin:0;">
-        <p class="quote-line">To those with disabilities, pursue your dreams. Don&rsquo;t give up!</p>
-        <p class="quote-sub">Believe in your abilities and yourself. Don&rsquo;t let anyone tell you any different. Have a strong support system, and surround yourself with positive people on the same mission as you!</p>
+        <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
+        <p class="quote-sub">I know my stuff. I have the knowledge of the game inside and out.</p>
       </blockquote>
-      <div class="label" style="margin-top:32px;font-size:12px;letter-spacing:0.18em;">Malcom Harris-Gowdie</div>
+      <div class="quote-name">Malcom Harris-Gowdie</div>
     </div>
   </section>
 
-  <section id="facts" style="padding:clamp(58px,6.5vw,88px) 0;">
-    <div class="wrap">
-      <div style="text-align:center;margin-bottom:38px;">
-        <span class="label" style="color:var(--paper-dim);">Film facts</span>
-      </div>
-      <div class="spec-grid">
-        <div class="spec"><div class="label">Runtime</div><div class="val">55:07</div></div>
-        <div class="spec"><div class="label">Format</div><div class="val">4K</div></div>
-        <div class="spec"><div class="label">Genre</div><div class="val">Documentary</div></div>
-        <div class="spec"><div class="label">Status</div><div class="val live">Seeking festival premiere</div></div>
-        <div class="spec"><div class="label">Director &middot; Editor &middot; Producer</div><div class="val">Hunter Armor</div></div>
-        <div class="spec"><div class="label">Producer</div><div class="val">Patrick Allen</div></div>
-        <div class="spec"><div class="label">Executive Producer</div><div class="val">Zachary Best</div></div>
-        <div class="spec"><div class="label">Associate Producer</div><div class="val">Christy Weir</div></div>
-      </div>
-    </div>
-  </section>
 
   <section id="follow" class="follow">
     <div class="wrap narrow" style="text-align:center;">
@@ -324,13 +336,23 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <div class="wrap">
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
       <span class="label" style="font-size:11.5px;color:var(--paper-dim);">A film by</span>
-      <img src="/assets/img/fansided.png" alt="FanSided" width="170" height="37" style="width:170px;height:auto;opacity:0.34;" loading="lazy">
+      <img src="assets/img/fansided.png" alt="FanSided" width="170" height="37" style="width:170px;height:auto;opacity:0.34;" loading="lazy">
     </div>
     <div class="footer-links">
       <a class="label" href="mailto:press@fansided.com">press@fansided.com</a>
       <a class="label" href="https://www.instagram.com/thesportscasterfilm/" target="_blank" rel="noopener">@thesportscasterfilm</a>
     </div>
-    <div class="label" style="font-size:11px;color:var(--paper-dim);opacity:.65;">&copy; 2026 FanSided &middot; All rights reserved</div>
+
+    <div class="billing">
+      <p>FanSided Presents &ldquo;The Sportscaster&rdquo;
+        <span class="role">Edited by</span> Hunter Armor
+        <span class="role">Produced by</span> Patrick Allen &nbsp;Hunter Armor
+        <span class="role">Executive Producer</span> Zachary Best
+        <span class="role">Associate Producer</span> Christy Weir
+        <span class="role">Directed by</span> Hunter Armor</p>
+      <p class="legal"><em>The Sportscaster</em> is a production of FanSided. Running time 55:07.
+        &copy; 2026 FanSided LLC. All Rights Reserved.</p>
+    </div>
   </div>
 </footer>
 
