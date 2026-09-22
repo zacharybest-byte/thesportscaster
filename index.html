@@ -33,9 +33,6 @@
 
 <link rel="preload" href="assets/fonts/charter-black.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/charter-roman.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Pathway+Gothic+One&display=swap">
 
 <script type="application/ld+json">
 {
@@ -102,6 +99,9 @@
 <style>
 @font-face{font-family:'Charter';src:url('assets/fonts/charter-roman.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 @font-face{font-family:'Charter';src:url('assets/fonts/charter-black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow Condensed';src:url('assets/fonts/barlow-condensed-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Caveat';src:url('assets/fonts/caveat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Pathway Gothic One';src:url('assets/fonts/pathway-gothic-one.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 
 :root{
   --ink:#14161c;
@@ -195,13 +195,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
 .quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0;}
 .quote .wrap{max-width:960px;text-align:center;}
-.quote-line{font-family:'Caveat',"Segoe Script","Bradley Hand",Georgia,serif;font-weight:700;
-  font-style:italic;font-synthesis-style:none;
-  font-size:clamp(36px,6.4vw,82px);line-height:1.1;letter-spacing:0;}
+.quote-line{font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(34px,5.2vw,68px);line-height:1.02;letter-spacing:0.005em;text-wrap:balance;margin:0;}
 .quote-sub{margin:26px auto 0;max-width:620px;font-size:clamp(17px,1.7vw,20px);line-height:1.6;color:#ffe2e7;}
+.quote-fig{margin:0;}
+.quote-fig blockquote{margin:0;}
+.quote-mark{display:block;width:clamp(66px,7.4vw,98px);height:auto;margin:0 auto 6px;fill:#fff;}
+.quote-by{display:inline-flex;align-items:center;gap:14px;margin-top:36px;text-align:left;}
+.quote-by img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,0.28);flex:none;}
+.qb-name{display:block;font-weight:900;text-transform:uppercase;letter-spacing:0.12em;font-size:13px;line-height:1.3;}
+.qb-role{display:block;margin-top:3px;font-size:14px;line-height:1.4;color:#ffe2e7;}
 .quote-div{width:54px;height:2px;background:rgba(255,255,255,0.45);margin:30px auto 0;}
-.quote-name{display:inline-block;margin-top:34px;padding:9px 20px;background:#fff;color:var(--quote-red);
-  text-transform:uppercase;letter-spacing:0.16em;font-size:12px;font-weight:900;}
 
 .spec .label{font-size:11.5px;color:var(--paper-dim);}
 .spec .val{font-size:17.5px;margin-top:8px;}
@@ -371,12 +374,20 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <section class="quote" aria-labelledby="quote-h">
     <div class="wrap">
       <h2 id="quote-h" class="vh">Malcom Harris-Gowdie, in his own words</h2>
-      <blockquote style="margin:0;">
-        <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
-        <div class="quote-div"></div>
-        <p class="quote-sub">I know my stuff. I have the knowledge of the game inside and out.</p>
-      </blockquote>
-      <div class="quote-name">Malcom Harris-Gowdie</div>
+      <figure class="quote-fig">
+        <svg class="quote-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path transform="rotate(180 12 12)" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+        </svg>
+        <blockquote>
+          <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
+          <div class="quote-div"></div>
+          <p class="quote-sub">&ldquo;I know my stuff. I have the knowledge of the game inside and out.&rdquo;</p>
+        </blockquote>
+        <figcaption class="quote-by">
+          <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+          <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
