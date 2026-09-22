@@ -44,7 +44,9 @@
       "url": "https://thesportscasterfilm.com/",
       "name": "The Sportscaster",
       "inLanguage": "en-US",
-      "publisher": { "@id": "https://thesportscasterfilm.com/#fansided" }
+      "publisher": {
+        "@id": "https://thesportscasterfilm.com/#fansided"
+      }
     },
     {
       "@type": "Organization",
@@ -60,8 +62,14 @@
       "jobTitle": "Sports reporter",
       "description": "Special Olympics athlete and sports reporter who has covered four Super Bowls for FanSided. He has autism and cerebral palsy.",
       "affiliation": [
-        { "@id": "https://thesportscasterfilm.com/#fansided" },
-        { "@type": "Organization", "name": "Special Olympics", "url": "https://www.specialolympics.org/" }
+        {
+          "@id": "https://thesportscasterfilm.com/#fansided"
+        },
+        {
+          "@type": "Organization",
+          "name": "Special Olympics",
+          "url": "https://www.specialolympics.org/"
+        }
       ]
     },
     {
@@ -69,28 +77,118 @@
       "@id": "https://thesportscasterfilm.com/#movie",
       "name": "The Sportscaster",
       "alternateName": "The Sportscaster documentary",
-      "genre": ["Documentary", "Sports"],
+      "genre": [
+        "Documentary",
+        "Sports"
+      ],
       "duration": "PT55M",
       "inLanguage": "en",
       "countryOfOrigin": "US",
       "url": "https://thesportscasterfilm.com/",
-      "mainEntityOfPage": { "@id": "https://thesportscasterfilm.com/#website" },
+      "mainEntityOfPage": {
+        "@id": "https://thesportscasterfilm.com/#website"
+      },
       "image": "https://thesportscasterfilm.com/assets/img/og-image.jpg",
       "description": "A FanSided documentary following Special Olympics athlete and reporter Malcom Harris-Gowdie through Super Bowl Media Week.",
-      "about": { "@id": "https://thesportscasterfilm.com/#malcom" },
+      "about": {
+        "@id": "https://thesportscasterfilm.com/#malcom"
+      },
       "creativeWorkStatus": "Completed",
       "copyrightYear": 2026,
-      "copyrightHolder": { "@id": "https://thesportscasterfilm.com/#fansided" },
-      "sameAs": ["https://www.instagram.com/thesportscasterfilm/"],
-      "director": { "@type": "Person", "name": "Hunter Armor" },
-      "musicBy": { "@type": "Person", "name": "Doug Beiden" },
-      "producer": [
-        { "@type": "Person", "name": "Hunter Armor" },
-        { "@type": "Person", "name": "Patrick Allen" },
-        { "@type": "Person", "name": "Zachary Best" },
-        { "@type": "Person", "name": "Christy Weir" }
+      "copyrightHolder": {
+        "@id": "https://thesportscasterfilm.com/#fansided"
+      },
+      "sameAs": [
+        "https://www.instagram.com/thesportscasterfilm/"
       ],
-      "productionCompany": { "@id": "https://thesportscasterfilm.com/#fansided" }
+      "actor": [
+        {
+          "@id": "https://thesportscasterfilm.com/#malcom"
+        },
+        {
+          "@type": "Person",
+          "name": "George Kittle"
+        },
+        {
+          "@type": "Person",
+          "name": "Christian McCaffrey"
+        },
+        {
+          "@type": "Person",
+          "name": "Derrick Henry"
+        },
+        {
+          "@type": "Person",
+          "name": "Bijan Robinson"
+        },
+        {
+          "@type": "Person",
+          "name": "Rob Gronkowski"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli Manning"
+        },
+        {
+          "@type": "Person",
+          "name": "Terrell Davis"
+        },
+        {
+          "@type": "Person",
+          "name": "Robert Griffin III"
+        },
+        {
+          "@type": "Person",
+          "name": "Cris Collinsworth"
+        }
+      ],
+      "director": {
+        "@type": "Person",
+        "name": "Hunter Armor"
+      },
+      "musicBy": {
+        "@type": "Person",
+        "name": "Doug Beiden"
+      },
+      "producer": [
+        {
+          "@type": "Person",
+          "name": "Hunter Armor"
+        },
+        {
+          "@type": "Person",
+          "name": "Patrick Allen"
+        },
+        {
+          "@type": "Person",
+          "name": "Zachary Best"
+        },
+        {
+          "@type": "Person",
+          "name": "Christy Weir"
+        }
+      ],
+      "productionCompany": {
+        "@id": "https://thesportscasterfilm.com/#fansided"
+      },
+      "trailer": {
+        "@id": "https://thesportscasterfilm.com/#trailer"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://thesportscasterfilm.com/#trailer",
+      "name": "The Sportscaster | Official Trailer",
+      "description": "Official trailer for The Sportscaster, a FanSided documentary about Special Olympics athlete and sports reporter Malcom Harris-Gowdie at Super Bowl Media Week.",
+      "thumbnailUrl": "https://thesportscasterfilm.com/assets/img/trailer-card.jpg",
+      "uploadDate": "2026-09-22",
+      "embedUrl": "https://player.vimeo.com/video/1229213321?h=27006d0253",
+      "publisher": {
+        "@id": "https://thesportscasterfilm.com/#fansided"
+      },
+      "isPartOf": {
+        "@id": "https://thesportscasterfilm.com/#movie"
+      }
     }
   ]
 }
@@ -115,7 +213,7 @@
 }
 *{box-sizing:border-box;}
 ::selection{background:var(--accent);color:#fff;}
-.body,.story-body,.story-lede,.hero-lede,.quote-sub{text-wrap:pretty;}
+.body,.story-body,.story-lede,.hero-lede{text-wrap:pretty;}
 html{scroll-behavior:smooth;}
 #top,#trailer,#story,#follow{scroll-margin-top:74px;}
 body{margin:0;background:var(--ink);color:var(--paper);font-family:'Charter',Georgia,serif;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
@@ -170,7 +268,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .trailer-head{text-align:center;margin-bottom:clamp(24px,2.8vw,34px);}
 .trailer-head .rule{width:34px;height:2px;margin:0 auto 14px;}
 .trailer-head h2{font-weight:400;font-size:12.5px;line-height:1.5;letter-spacing:0.15em;color:var(--paper-dim);}
-.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid rgba(242,245,247,0.22);
+.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;container-type:inline-size;border:1px solid rgba(242,245,247,0.22);
   box-shadow:0 26px 60px rgba(0,0,0,0.45);}
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
 .story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
@@ -189,22 +287,72 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .story-head h2{font-size:clamp(34px,9vw,50px);}
 }
 .frame img{width:100%;height:100%;object-fit:cover;}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
+.play-facade{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;display:block;}
+.play-facade img{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s ease;}
+.play-facade::after{content:"";position:absolute;inset:0;background:rgba(20,22,28,0.22);transition:background-color .3s ease;}
+.play-btn{position:absolute;left:65%;top:66%;z-index:2;display:flex;align-items:center;justify-content:center;width:clamp(40px,9cqw,100px);height:clamp(40px,9cqw,100px);transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 14px 40px rgba(0,0,0,0.55);transition:transform .25s ease;}
+.play-btn svg{width:34%;height:auto;margin-left:7%;}
+.play-ring{position:absolute;inset:-13%;border-radius:50%;border:1.5px solid rgba(255,255,255,0.55);animation:ring 2.6s ease-out infinite;}
+@keyframes ring{0%{transform:scale(0.92);opacity:.85;}100%{transform:scale(1.35);opacity:0;}}
+.play-facade:hover img,.play-facade:focus-visible img{transform:scale(1.025);}
+.play-facade:hover::after,.play-facade:focus-visible::after{background:rgba(20,22,28,0.08);}
+.play-facade:hover .play-btn,.play-facade:focus-visible .play-btn{position:absolute;left:65%;top:66%;z-index:2;display:flex;align-items:center;justify-content:center;width:clamp(40px,9cqw,100px);height:clamp(40px,9cqw,100px);transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 14px 40px rgba(0,0,0,0.55);transition:transform .25s ease;}
+.play-facade:focus-visible{outline:3px solid var(--paper);outline-offset:4px;}
 
 .band{position:relative;height:clamp(300px,34vw,480px);overflow:hidden;background:var(--ink);border-top:6px solid var(--accent);border-bottom:1px solid var(--line);padding-top:14px;}
 .band img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 
-.quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0;}
+.quote{background:var(--quote-red);color:#fff;padding:clamp(66px,8vw,112px) 0 clamp(46px,5vw,66px);}
 .quote .wrap{max-width:960px;text-align:center;}
-.quote-line{font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(34px,5.2vw,68px);line-height:1.02;letter-spacing:0.005em;text-wrap:balance;margin:0;}
-.quote-sub{margin:26px auto 0;max-width:620px;font-size:clamp(17px,1.7vw,20px);line-height:1.6;color:#ffe2e7;}
+
+/* --- the cast band: who Malcom got on the record --- */
+.cast{background:var(--ink);border-top:6px solid var(--accent);
+  padding:clamp(38px,5vw,54px) 0 clamp(44px,6vw,64px);}
+.cast-kick{font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.24em;font-size:12.5px;color:var(--accent-lite);
+  text-align:center;margin:0 0 30px;}
+.cast-grid{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;
+  justify-content:center;gap:clamp(14px,2vw,22px);}
+.cast-card{flex:0 1 calc((100% - 4 * clamp(14px,2vw,22px)) / 5);min-width:150px;max-width:230px;}
+.cast-card img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;
+  display:block;filter:grayscale(1) contrast(1.06);transition:filter .3s ease;}
+.cast-card:hover img{filter:grayscale(0) contrast(1);}
+.cast-name{font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:700;
+  text-transform:uppercase;font-size:clamp(16px,1.5vw,20px);line-height:1.08;margin:12px 0 0;
+  letter-spacing:0.02em;}
+.cast-name::after{content:"";display:block;width:26px;height:3px;background:var(--accent);margin-top:9px;}
+.cast-role{margin:9px 0 0;font-size:12.5px;line-height:1.4;color:var(--paper-dim);}
+@media (max-width:900px){.cast-card{flex-basis:calc((100% - 2 * 18px) / 3);}}
+@media (max-width:560px){.cast-card{flex-basis:calc((100% - 14px) / 2);}}
+@media (prefers-reduced-motion:reduce){.cast-card img{transition:none;}}
+.quote-line{font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(28px,4.1vw,54px);line-height:1.06;letter-spacing:0.005em;text-wrap:balance;margin:0;}
 .quote-fig{margin:0;}
+.quote-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;-ms-overflow-style:none;}
+.quote-track::-webkit-scrollbar{display:none;}
+.quote-track:focus-visible{outline:3px solid var(--paper);outline-offset:10px;}
+.quote-slide{flex:0 0 100%;min-width:100%;margin:0;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:space-between;gap:34px;}
+.quote-text{flex:1;margin:0;display:flex;align-items:center;justify-content:center;}
+.quote-nav{display:flex;align-items:center;justify-content:center;gap:clamp(12px,2vw,20px);margin-top:30px;}
+.qn-arrow{display:flex;align-items:center;justify-content:center;width:46px;height:46px;flex:none;padding:0;
+  border:1px solid rgba(255,255,255,0.5);border-radius:50%;background:none;color:#fff;cursor:pointer;
+  transition:background-color .2s ease,border-color .2s ease,opacity .2s ease;}
+.qn-arrow:hover{background:rgba(255,255,255,0.15);border-color:#fff;}
+.qn-arrow:focus-visible{outline:3px solid var(--paper);outline-offset:3px;}
+.qn-dots{display:flex;align-items:center;gap:2px;}
+.qn-dot{position:relative;width:26px;height:26px;padding:0;border:0;background:none;cursor:pointer;}
+.qn-dot::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;
+  border-radius:50%;background:rgba(255,255,255,0.45);transition:background-color .2s ease,transform .2s ease;}
+.qn-dot:hover::after{background:rgba(255,255,255,0.8);}
+.qn-dot[aria-current="true"]::after{background:#fff;transform:scale(1.3);}
+.qn-dot:focus-visible{outline:3px solid var(--paper);outline-offset:0;border-radius:50%;}
 .quote-fig blockquote{margin:0;}
 .quote-mark{display:block;width:clamp(66px,7.4vw,98px);height:auto;margin:0 auto 6px;fill:#fff;}
-.quote-by{display:inline-flex;align-items:center;gap:14px;margin-top:36px;text-align:left;}
+.quote-by{display:flex;align-items:center;justify-content:center;gap:14px;text-align:left;min-height:72px;}
 .quote-by img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,0.28);flex:none;}
 .qb-name{display:block;font-weight:900;text-transform:uppercase;letter-spacing:0.12em;font-size:13px;line-height:1.3;}
 .qb-role{display:block;margin-top:3px;font-size:14px;line-height:1.4;color:#ffe2e7;}
-.quote-div{width:54px;height:2px;background:rgba(255,255,255,0.45);margin:30px auto 0;}
 
 .spec .label{font-size:11.5px;color:var(--paper-dim);}
 .spec .val{font-size:17.5px;margin-top:8px;}
@@ -272,6 +420,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .rise{animation:none;opacity:1;transform:none;}
+  .quote-track{scroll-behavior:auto;}
+  .play-ring{animation:none;opacity:0;}
+  .play-facade img{transition:none;}
   .spec-strip .live::before{animation:none;}
 }
 </style>
@@ -308,7 +459,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
       <h1 class="hero-title rise d2"><span class="vh">The </span>Sportscaster</h1>
       <p class="hero-lede rise d3">He came to the <span class="nb">Super Bowl</span> to tell their stories.<br>
         The story you won&rsquo;t forget is his.</p>
-      <a href="#story" class="btn btn-solid rise d4" style="margin-top:30px;">Read the synopsis</a>
+      <a href="#trailer" class="btn btn-solid rise d4" style="margin-top:30px;">
+        <svg width="11" height="13" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M0 0l13 7.5L0 15z"></path></svg>
+        Watch the trailer
+      </a>
     </div>
 
     <div class="spec-strip">
@@ -324,14 +478,26 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     </div>
   </section>
 
-  <section id="trailer" class="trailer-sec" aria-label="Trailer">
+  <section id="trailer" class="trailer-sec" aria-labelledby="trailer-h">
     <div class="wrap trailer-head">
       <div class="rule"></div>
-      <h2 class="label">Trailer<span class="vh"> for The Sportscaster</span> &middot; dropping soon</h2>
+      <h2 id="trailer-h" class="label">Official trailer<span class="vh"> for The Sportscaster</span></h2>
     </div>
     <div class="wrap">
-    <div class="frame">
-      <img src="assets/img/trailer-card.jpg" alt="The Sportscaster title card: Malcom Harris-Gowdie holding a Special Olympics and FanSided microphone" width="1280" height="720" loading="lazy">
+    <div class="frame" id="trailer-frame">
+      <button type="button" class="play-facade" id="play-trailer"
+              data-src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1"
+              aria-label="Play The Sportscaster official trailer">
+        <img src="assets/img/trailer-card.jpg" alt="" width="1280" height="720" loading="lazy">
+        <span class="play-btn" aria-hidden="true">
+          <span class="play-ring"></span>
+          <svg viewBox="0 0 13 15" width="24" height="28" fill="currentColor"><path d="M1 0.6l11.4 6.9L1 14.4z"></path></svg>
+        </span>
+      </button>
+      <noscript>
+        <iframe src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1"
+                title="The Sportscaster | Official Trailer" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </noscript>
     </div>
     </div>
   </section>
@@ -374,20 +540,117 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   <section class="quote" aria-labelledby="quote-h">
     <div class="wrap">
       <h2 id="quote-h" class="vh">Malcom Harris-Gowdie, in his own words</h2>
-      <figure class="quote-fig">
+      <div class="quote-fig">
         <svg class="quote-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path transform="rotate(180 12 12)" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
         </svg>
-        <blockquote>
-          <p class="quote-line">Whoever takes a chance on me is going to see the most hardworking sportscaster they&rsquo;ve ever seen.</p>
-          <div class="quote-div"></div>
-          <p class="quote-sub">&ldquo;I know my stuff. I have the knowledge of the game inside and out.&rdquo;</p>
-        </blockquote>
-        <figcaption class="quote-by">
-          <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
-          <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
-        </figcaption>
-      </figure>
+        <div class="quote-track" id="quote-track" tabindex="0" role="group"
+             aria-roledescription="carousel" aria-label="Voices from The Sportscaster">
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">Whoever takes a chance on me, they&rsquo;re going to see the most hardworking sportscaster that they&rsquo;ve ever seen.</p></blockquote>
+            <figcaption class="quote-by">
+            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">They think that I don&rsquo;t have the &lsquo;it&rsquo; factor, but I have the &lsquo;it&rsquo; factor.</p></blockquote>
+            <figcaption class="quote-by">
+            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">Sometimes the door is not going to be open. What I always say is, why don&rsquo;t you just walk up to the door and kick it down?</p></blockquote>
+            <figcaption class="quote-by">
+            <img src="assets/img/kittle-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+              <span><span class="qb-name">George Kittle</span><span class="qb-role">NFL tight end</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">There&rsquo;s so much power in believing in yourself, and not listening to what anyone else has to say.</p></blockquote>
+            <figcaption class="quote-by">
+            <img src="assets/img/mccaffrey-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+              <span><span class="qb-name">Christian McCaffrey</span><span class="qb-role">NFL All-Pro running back</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">I know one day his dream is going to come true. A real permanent broadcaster. And I hope I see that before my eyes close to this world.</p></blockquote>
+            <figcaption class="quote-by">
+              <span><span class="qb-name">Maria Gowdie</span><span class="qb-role">Malcom&rsquo;s mother</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote-slide">
+            <blockquote class="quote-text"><p class="quote-line">If I can be in sports media, so can you.</p></blockquote>
+            <figcaption class="quote-by">
+            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="quote-nav" id="quote-nav" hidden>
+          <button type="button" class="qn-arrow" data-dir="-1" aria-label="Previous quote">
+            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1.5L2 8.5l7 7"/></svg>
+          </button>
+          <div class="qn-dots" id="qn-dots"></div>
+          <button type="button" class="qn-arrow" data-dir="1" aria-label="Next quote">
+            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 1.5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cast" aria-labelledby="cast-h">
+    <div class="wrap">
+      <h2 id="cast-h" class="cast-kick">Who Malcom got on the record</h2>
+      <ul class="cast-grid">
+        <li class="cast-card">
+          <img src="assets/img/kittle-portrait.jpg" alt="George Kittle" width="640" height="800" loading="lazy">
+          <p class="cast-name">George<br>Kittle</p>
+          <p class="cast-role">Seven-time Pro Bowl tight end</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/mccaffrey-portrait.jpg" alt="Christian McCaffrey" width="640" height="800" loading="lazy">
+          <p class="cast-name">Christian<br>McCaffrey</p>
+          <p class="cast-role">NFL All-Pro running back</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/henry-portrait.jpg" alt="Derrick Henry" width="640" height="800" loading="lazy">
+          <p class="cast-name">Derrick<br>Henry</p>
+          <p class="cast-role">Two-time NFL rushing champion</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/robinson-portrait.jpg" alt="Bijan Robinson" width="640" height="800" loading="lazy">
+          <p class="cast-name">Bijan<br>Robinson</p>
+          <p class="cast-role">Pro Bowl running back</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/gronkowski-portrait.jpg" alt="Rob Gronkowski" width="640" height="800" loading="lazy">
+          <p class="cast-name">Rob<br>Gronkowski</p>
+          <p class="cast-role">Four-time Super Bowl champion</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/manning-portrait.jpg" alt="Eli Manning" width="640" height="800" loading="lazy">
+          <p class="cast-name">Eli<br>Manning</p>
+          <p class="cast-role">Two-time Super Bowl MVP</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/davis-portrait.jpg" alt="Terrell Davis" width="640" height="800" loading="lazy">
+          <p class="cast-name">Terrell<br>Davis</p>
+          <p class="cast-role">Pro Football Hall of Famer</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/griffin-portrait.jpg" alt="Robert Griffin III" width="640" height="800" loading="lazy">
+          <p class="cast-name">Robert<br>Griffin III</p>
+          <p class="cast-role">Heisman Trophy winner</p>
+        </li>
+        <li class="cast-card">
+          <img src="assets/img/collinsworth-portrait.jpg" alt="Cris Collinsworth" width="640" height="800" loading="lazy">
+          <p class="cast-name">Cris<br>Collinsworth</p>
+          <p class="cast-role">NBC Sports broadcaster</p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -459,6 +722,88 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   </div>
 </footer>
 
+<script>
+(function () {
+  var track = document.getElementById('quote-track');
+  var nav   = document.getElementById('quote-nav');
+  var dots  = document.getElementById('qn-dots');
+  if (!track || !nav || !dots) return;
+  var slides = track.querySelectorAll('.quote-slide');
+  if (slides.length < 2) return;
+
+  nav.hidden = false;
+  for (var i = 0; i < slides.length; i++) {
+    var d = document.createElement('button');
+    d.type = 'button'; d.className = 'qn-dot';
+    d.setAttribute('aria-label', 'Quote ' + (i + 1) + ' of ' + slides.length);
+    d.dataset.i = i;
+    dots.appendChild(d);
+  }
+  var buttons = dots.querySelectorAll('.qn-dot');
+
+  function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function mark(n) {
+    if (typeof n !== 'number') n = current();
+    for (var i = 0; i < buttons.length; i++) {
+      if (i === n) buttons[i].setAttribute('aria-current', 'true');
+      else buttons[i].removeAttribute('aria-current');
+    }
+    nav.querySelector('[data-dir="-1"]').style.opacity = n === 0 ? '.4' : '';
+    nav.querySelector('[data-dir="1"]').style.opacity = n === buttons.length - 1 ? '.4' : '';
+  }
+  function go(n) {
+    n = Math.max(0, Math.min(buttons.length - 1, n));
+    mark(n);                                   // update the dots at once, don't wait for the scroll
+    track.scrollTo({ left: n * track.clientWidth, behavior: 'smooth' });
+  }
+
+  nav.addEventListener('click', function (e) {
+    var arrow = e.target.closest('.qn-arrow');
+    if (arrow) { go(current() + Number(arrow.dataset.dir)); return; }
+    var dot = e.target.closest('.qn-dot');
+    if (dot) go(Number(dot.dataset.i));
+  });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(current() - 1); }
+  });
+  var tick;
+  track.addEventListener('scroll', function () {
+    clearTimeout(tick); tick = setTimeout(mark, 60);
+  }, { passive: true });
+  window.addEventListener('resize', function () { go(current()); });
+  mark();
+})();
+</script>
+<script>
+(function () {
+  var btn = document.getElementById('play-trailer');
+  if (!btn) return;
+  var warmed = false;
+  function warm() {
+    if (warmed) return; warmed = true;
+    ['https://player.vimeo.com','https://i.vimeocdn.com','https://f.vimeocdn.com'].forEach(function (h) {
+      var l = document.createElement('link'); l.rel = 'preconnect'; l.href = h; l.crossOrigin = '';
+      document.head.appendChild(l);
+    });
+  }
+  btn.addEventListener('pointerenter', warm, { once: true });
+  btn.addEventListener('focus', warm, { once: true });
+  btn.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = btn.getAttribute('data-src');
+    f.title = 'The Sportscaster | Official Trailer';
+    f.allow = 'autoplay; fullscreen; picture-in-picture';
+    f.setAttribute('allowfullscreen', '');
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    btn.replaceWith(f);
+    f.focus();
+  });
+  // the hero button should start the film, not just scroll to it
+  var hero = document.querySelector('a.btn[href="#trailer"]');
+  if (hero) hero.addEventListener('click', function () { setTimeout(function(){ if (document.getElementById('play-trailer')) btn.click(); }, 450); });
+})();
+</script>
 <script>
 (function () {
   var form = document.getElementById('signup');
