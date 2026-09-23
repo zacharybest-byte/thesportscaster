@@ -94,6 +94,20 @@
         "@id": "https://thesportscasterfilm.com/#malcom"
       },
       "creativeWorkStatus": "Completed",
+      "accessMode": [
+        "visual",
+        "auditory",
+        "textual"
+      ],
+      "accessModeSufficient": [
+        "visual, textual"
+      ],
+      "accessibilityFeature": [
+        "captions",
+        "synchronizedAudioText"
+      ],
+      "accessibilityHazard": "noFlashingHazard",
+      "accessibilitySummary": "The full film is closed captioned. A captioned master and a separate caption file are available for festival screenings on request.",
       "copyrightYear": 2026,
       "copyrightHolder": {
         "@id": "https://thesportscasterfilm.com/#fansided"
@@ -268,7 +282,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .trailer-head{text-align:center;margin-bottom:clamp(24px,2.8vw,34px);}
 .trailer-head .rule{width:34px;height:2px;margin:0 auto 14px;}
 .trailer-head h2{font-weight:400;font-size:12.5px;line-height:1.5;letter-spacing:0.15em;color:var(--paper-dim);}
-.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;container-type:inline-size;border:1px solid rgba(242,245,247,0.22);
+.frame{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;container-type:inline-size;border:1px solid rgba(242,245,247,0.38);
   box-shadow:0 26px 60px rgba(0,0,0,0.45);}
 .story{padding:clamp(66px,7.5vw,104px) 0 clamp(60px,7vw,92px);}
 .story-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,72px);align-items:start;}
@@ -332,11 +346,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   scrollbar-width:none;-ms-overflow-style:none;}
 .quote-track::-webkit-scrollbar{display:none;}
 .quote-track:focus-visible{outline:3px solid var(--paper);outline-offset:10px;}
-.quote-slide{flex:0 0 100%;min-width:100%;margin:0;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:space-between;gap:34px;}
-.quote-text{flex:1;margin:0;display:flex;align-items:center;justify-content:center;}
+.quote-slide{flex:0 0 100%;min-width:100%;margin:0;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:center;gap:30px;}
+.quote-text{flex:none;margin:0;display:flex;align-items:center;justify-content:center;}
 .quote-nav{display:flex;align-items:center;justify-content:center;gap:clamp(12px,2vw,20px);margin-top:30px;}
 .qn-arrow{display:flex;align-items:center;justify-content:center;width:46px;height:46px;flex:none;padding:0;
-  border:1px solid rgba(255,255,255,0.5);border-radius:50%;background:none;color:#fff;cursor:pointer;
+  border:1px solid rgba(255,255,255,0.78);border-radius:50%;background:none;color:#fff;cursor:pointer;
   transition:background-color .2s ease,border-color .2s ease,opacity .2s ease;}
 .qn-arrow:hover{background:rgba(255,255,255,0.15);border-color:#fff;}
 .qn-arrow:focus-visible{outline:3px solid var(--paper);outline-offset:3px;}
@@ -367,6 +381,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .follow-contact .label{display:block;color:var(--paper-dim);font-size:11.5px;margin-bottom:8px;}
 .follow-contact a{display:inline-block;font-size:18px;padding-block:4px 3px;border-bottom:1px solid rgba(232,49,81,0.55);padding-bottom:2px;transition:border-color .2s ease,color .2s ease;}
 .follow-contact a:hover{color:var(--accent-lite);border-bottom-color:var(--accent-lite);}
+.follow-access{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);}
+.follow-access .label{display:block;color:var(--paper-dim);font-size:11.5px;margin-bottom:8px;}
+.follow-access p{font-size:14.5px;line-height:1.65;color:var(--paper-dim);max-width:44ch;}
+.follow-access .title{color:var(--paper);font-style:italic;}
 
 .signup-card{background:rgba(242,245,247,0.045);border:1px solid var(--line);padding:clamp(24px,2.6vw,32px);}
 .signup-card .label{display:block;color:var(--paper-dim);font-size:11.5px;margin-bottom:16px;}
@@ -481,6 +499,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <span class="label sep">/</span>
         <span class="label">2026</span>
         <span class="label sep">/</span>
+        <span class="label">Closed captioned</span>
+        <span class="label sep">/</span>
         <span class="label live">Seeking festival premiere</span>
       </div>
     </div>
@@ -494,7 +514,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="wrap">
     <div class="frame" id="trailer-frame">
       <button type="button" class="play-facade" id="play-trailer"
-              data-src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1"
+              data-src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1&amp;texttrack=en"
               aria-label="Play The Sportscaster official trailer">
         <img src="assets/img/trailer-card.jpg" alt="" width="1280" height="720" loading="lazy">
         <span class="play-btn" aria-hidden="true">
@@ -503,7 +523,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         </span>
       </button>
       <noscript>
-        <iframe src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1"
+        <iframe src="https://player.vimeo.com/video/1229213321?h=27006d0253&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;dnt=1&amp;texttrack=en"
                 title="The Sportscaster | Official Trailer" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
       </noscript>
     </div>
@@ -580,6 +600,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <figure class="quote-slide">
             <blockquote class="quote-text"><p class="quote-line">I know one day his dream is going to come true. A real permanent broadcaster. And I hope I see that before my eyes close to this world.</p></blockquote>
             <figcaption class="quote-by">
+            <img src="assets/img/maria-avatar.jpg" alt="" width="144" height="144" loading="lazy">
               <span><span class="qb-name">Maria Gowdie</span><span class="qb-role">Malcom&rsquo;s mother</span></span>
             </figcaption>
           </figure>
@@ -661,6 +682,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <div class="follow-contact">
           <span class="label">Press &amp; festival programmers</span>
           <a href="mailto:press@fansided.com">press@fansided.com</a>
+        </div>
+        <div class="follow-access">
+          <span class="label">Accessibility</span>
+          <p><span class="title">The Sportscaster</span> is closed captioned in full. For festival
+             screenings we can supply a captioned master and a separate caption file on request.</p>
         </div>
       </div>
 
