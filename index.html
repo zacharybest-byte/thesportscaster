@@ -10,22 +10,22 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#14161c">
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="video.movie">
 <meta property="og:site_name" content="The Sportscaster">
 <meta property="og:url" content="https://thesportscasterfilm.com/">
 <meta property="og:title" content="The Sportscaster — A Documentary About Malcom Harris-Gowdie">
 <meta property="og:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
-<meta property="og:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
+<meta property="og:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="en_US">
-<meta property="og:image:alt" content="The Sportscaster — Malcom Harris-Gowdie at Super Bowl Media Week, surrounded by camera crews">
+<meta property="og:image:alt" content="The Sportscaster — Malcom Harris-Gowdie, a Special Olympics athlete and sports reporter, smiling with his microphone">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Sportscaster — A Documentary About Malcom Harris-Gowdie">
 <meta name="twitter:description" content="He came to the Super Bowl to tell their stories. The story you won't forget is his.">
-<meta name="twitter:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg">
-<meta name="twitter:image:alt" content="Malcom Harris-Gowdie at Super Bowl Media Week, surrounded by camera crews">
+<meta name="twitter:image" content="https://thesportscasterfilm.com/assets/img/og-image.jpg?v=2">
+<meta name="twitter:image:alt" content="Malcom Harris-Gowdie, a Special Olympics athlete and sports reporter, smiling with his microphone">
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/icon-512.png" type="image/png">
@@ -314,7 +314,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   text-align:center;margin:0 0 30px;}
 .cast-grid{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;
   justify-content:center;gap:clamp(14px,2vw,22px);}
-.cast-card{flex:0 1 calc((100% - 4 * clamp(14px,2vw,22px)) / 5);min-width:150px;max-width:230px;}
+.cast-card{flex:0 1 calc((100% - 4 * clamp(14px,2vw,22px)) / 5);min-width:128px;max-width:230px;}
 .cast-card img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;
   display:block;filter:grayscale(1) contrast(1.06);transition:filter .3s ease;}
 .cast-card:hover img{filter:grayscale(0) contrast(1);}
@@ -373,7 +373,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .follow-row{display:flex;flex-direction:column;gap:10px;}
 .field{width:100%;min-height:54px;padding:0 18px;border:1px solid rgba(242,245,247,0.35);background:rgba(20,22,28,0.55);color:var(--paper);font-family:'Charter',Georgia,serif;font-size:16px;}
 .field::placeholder{color:var(--paper-dim);}
-.field:focus{border-color:var(--paper);outline:none;}
+.field:focus{border-color:var(--paper);}
+.field:focus-visible{outline:2px solid var(--paper);outline-offset:2px;}
 .follow-row .btn{width:100%;min-height:54px;}
 .form-note{margin-top:12px;font-size:12.5px;color:var(--paper-dim);min-height:1.2em;}
 .form-privacy{margin-top:2px;font-size:12.5px;line-height:1.6;color:#8fa3b1;}
@@ -412,10 +413,17 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .hero{min-height:600px;padding:96px 0 0;}
   .hero-img{object-position:center 26%;}
   .hero-title{font-size:min(10.6vw,46px);letter-spacing:-0.012em;}
-  .nav-extra{display:none;}
+  .nav-inner{gap:12px;}
+  .nav-links{gap:15px;}
+  .nav-links a{font-size:11.5px;letter-spacing:0.08em;}
   .follow-grid{grid-template-columns:1fr;gap:30px;}
   .follow-head h2{font-size:clamp(28px,8vw,40px);}
   .band{height:clamp(240px,58vw,300px);}
+}
+@media (max-width:380px){
+  .nav-mark{font-size:13.5px;letter-spacing:0.02em;}
+  .nav-links{gap:11px;}
+  .nav-links a{letter-spacing:0.05em;}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
@@ -506,7 +514,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="wrap story-grid">
       <div class="story-head">
         <div class="rule"></div>
-        <h2>He knows<br>the game.<br>Now hear<br>
+        <h2>He knows <br>the game. <br>Now hear <br>
           <span class="script">his story.</span></h2>
       </div>
       <div>
@@ -541,7 +549,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
   <section class="quote" aria-labelledby="quote-h">
     <div class="wrap">
-      <h2 id="quote-h" class="vh">Malcom Harris-Gowdie, in his own words</h2>
+      <h2 id="quote-h" class="vh">Voices from The Sportscaster</h2>
       <div class="quote-fig">
         <svg class="quote-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path transform="rotate(180 12 12)" d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
@@ -551,42 +559,28 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           <figure class="quote-slide">
             <blockquote class="quote-text"><p class="quote-line">Whoever takes a chance on me, they&rsquo;re going to see the most hardworking sportscaster that they&rsquo;ve ever seen.</p></blockquote>
             <figcaption class="quote-by">
-            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
-              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
-            </figcaption>
-          </figure>
-          <figure class="quote-slide">
-            <blockquote class="quote-text"><p class="quote-line">They think that I don&rsquo;t have the &lsquo;it&rsquo; factor, but I have the &lsquo;it&rsquo; factor.</p></blockquote>
-            <figcaption class="quote-by">
-            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+            <img src="assets/img/malcom-avatar.jpg" alt="" width="144" height="144" loading="lazy">
               <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
             </figcaption>
           </figure>
           <figure class="quote-slide">
             <blockquote class="quote-text"><p class="quote-line">Sometimes the door is not going to be open. What I always say is, why don&rsquo;t you just walk up to the door and kick it down?</p></blockquote>
             <figcaption class="quote-by">
-            <img src="assets/img/kittle-avatar.jpg" alt="" width="72" height="72" loading="lazy">
+            <img src="assets/img/kittle-avatar.jpg" alt="" width="144" height="144" loading="lazy">
               <span><span class="qb-name">George Kittle</span><span class="qb-role">NFL tight end</span></span>
             </figcaption>
           </figure>
           <figure class="quote-slide">
-            <blockquote class="quote-text"><p class="quote-line">There&rsquo;s so much power in believing in yourself, and not listening to what anyone else has to say.</p></blockquote>
+            <blockquote class="quote-text"><p class="quote-line">They think that I don&rsquo;t have the &lsquo;it&rsquo; factor, but I have the &lsquo;it&rsquo; factor.</p></blockquote>
             <figcaption class="quote-by">
-            <img src="assets/img/mccaffrey-avatar.jpg" alt="" width="72" height="72" loading="lazy">
-              <span><span class="qb-name">Christian McCaffrey</span><span class="qb-role">NFL All-Pro running back</span></span>
+            <img src="assets/img/malcom-avatar.jpg" alt="" width="144" height="144" loading="lazy">
+              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
             </figcaption>
           </figure>
           <figure class="quote-slide">
             <blockquote class="quote-text"><p class="quote-line">I know one day his dream is going to come true. A real permanent broadcaster. And I hope I see that before my eyes close to this world.</p></blockquote>
             <figcaption class="quote-by">
               <span><span class="qb-name">Maria Gowdie</span><span class="qb-role">Malcom&rsquo;s mother</span></span>
-            </figcaption>
-          </figure>
-          <figure class="quote-slide">
-            <blockquote class="quote-text"><p class="quote-line">If I can be in sports media, so can you.</p></blockquote>
-            <figcaption class="quote-by">
-            <img src="assets/img/malcom-avatar.jpg" alt="" width="72" height="72" loading="lazy">
-              <span><span class="qb-name">Malcom Harris-Gowdie</span><span class="qb-role">Sportscaster &middot; Special Olympics athlete</span></span>
             </figcaption>
           </figure>
         </div>
@@ -605,51 +599,51 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
   <section class="cast" aria-labelledby="cast-h">
     <div class="wrap">
-      <h2 id="cast-h" class="cast-kick">Athlete interviews</h2>
+      <h2 id="cast-h" class="cast-kick">Interviews</h2>
       <ul class="cast-grid">
         <li class="cast-card">
-          <img src="assets/img/kittle-portrait.jpg" alt="George Kittle" width="640" height="800" loading="lazy">
-          <p class="cast-name">George<br>Kittle</p>
+          <img src="assets/img/kittle-portrait.jpg" alt="George Kittle" width="460" height="575" loading="lazy">
+          <p class="cast-name">George <br>Kittle</p>
           <p class="cast-role">Seven-time Pro Bowl tight end</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/mccaffrey-portrait.jpg" alt="Christian McCaffrey" width="640" height="800" loading="lazy">
-          <p class="cast-name">Christian<br>McCaffrey</p>
+          <img src="assets/img/mccaffrey-portrait.jpg" alt="Christian McCaffrey" width="460" height="575" loading="lazy">
+          <p class="cast-name">Christian <br>McCaffrey</p>
           <p class="cast-role">NFL All-Pro running back</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/henry-portrait.jpg" alt="Derrick Henry" width="640" height="800" loading="lazy">
-          <p class="cast-name">Derrick<br>Henry</p>
+          <img src="assets/img/henry-portrait.jpg" alt="Derrick Henry" width="460" height="575" loading="lazy">
+          <p class="cast-name">Derrick <br>Henry</p>
           <p class="cast-role">Two-time NFL rushing champion</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/robinson-portrait.jpg" alt="Bijan Robinson" width="640" height="800" loading="lazy">
-          <p class="cast-name">Bijan<br>Robinson</p>
+          <img src="assets/img/robinson-portrait.jpg" alt="Bijan Robinson" width="460" height="575" loading="lazy">
+          <p class="cast-name">Bijan <br>Robinson</p>
           <p class="cast-role">Pro Bowl running back</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/gronkowski-portrait.jpg" alt="Rob Gronkowski" width="640" height="800" loading="lazy">
-          <p class="cast-name">Rob<br>Gronkowski</p>
+          <img src="assets/img/gronkowski-portrait.jpg" alt="Rob Gronkowski" width="460" height="575" loading="lazy">
+          <p class="cast-name">Rob <br>Gronkowski</p>
           <p class="cast-role">Four-time Super Bowl champion</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/manning-portrait.jpg" alt="Eli Manning" width="640" height="800" loading="lazy">
-          <p class="cast-name">Eli<br>Manning</p>
+          <img src="assets/img/manning-portrait.jpg" alt="Eli Manning" width="460" height="575" loading="lazy">
+          <p class="cast-name">Eli <br>Manning</p>
           <p class="cast-role">Two-time Super Bowl MVP</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/davis-portrait.jpg" alt="Terrell Davis" width="640" height="800" loading="lazy">
-          <p class="cast-name">Terrell<br>Davis</p>
+          <img src="assets/img/davis-portrait.jpg" alt="Terrell Davis" width="460" height="575" loading="lazy">
+          <p class="cast-name">Terrell <br>Davis</p>
           <p class="cast-role">Pro Football Hall of Famer</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/griffin-portrait.jpg" alt="Robert Griffin III" width="640" height="800" loading="lazy">
-          <p class="cast-name">Robert<br>Griffin III</p>
+          <img src="assets/img/griffin-portrait.jpg" alt="Robert Griffin III" width="460" height="575" loading="lazy">
+          <p class="cast-name">Robert <br>Griffin III</p>
           <p class="cast-role">Heisman Trophy winner</p>
         </li>
         <li class="cast-card">
-          <img src="assets/img/collinsworth-portrait.jpg" alt="Cris Collinsworth" width="640" height="800" loading="lazy">
-          <p class="cast-name">Cris<br>Collinsworth</p>
+          <img src="assets/img/collinsworth-portrait.jpg" alt="Cris Collinsworth" width="460" height="575" loading="lazy">
+          <p class="cast-name">Cris <br>Collinsworth</p>
           <p class="cast-role">NBC Sports broadcaster</p>
         </li>
       </ul>
@@ -743,9 +737,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   }
   var buttons = dots.querySelectorAll('.qn-dot');
 
+  /* `idx` is the source of truth while a smooth scroll is still animating —
+     reading scrollLeft mid-flight makes fast repeat presses lose a step. */
+  var idx = 0;
   function current() { return Math.round(track.scrollLeft / track.clientWidth); }
   function mark(n) {
     if (typeof n !== 'number') n = current();
+    idx = n;
     for (var i = 0; i < buttons.length; i++) {
       if (i === n) buttons[i].setAttribute('aria-current', 'true');
       else buttons[i].removeAttribute('aria-current');
@@ -761,19 +759,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
   nav.addEventListener('click', function (e) {
     var arrow = e.target.closest('.qn-arrow');
-    if (arrow) { go(current() + Number(arrow.dataset.dir)); return; }
+    if (arrow) { go(idx + Number(arrow.dataset.dir)); return; }
     var dot = e.target.closest('.qn-dot');
     if (dot) go(Number(dot.dataset.i));
   });
   track.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(current() - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(idx - 1); }
   });
   var tick;
   track.addEventListener('scroll', function () {
     clearTimeout(tick); tick = setTimeout(mark, 60);
   }, { passive: true });
-  window.addEventListener('resize', function () { go(current()); });
+  window.addEventListener('resize', function () { go(idx); });
   mark();
 })();
 </script>
