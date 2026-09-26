@@ -265,6 +265,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .nav-links{display:flex;align-items:center;gap:26px;}
 .nav-links a{color:var(--paper-dim);font-size:12px;display:inline-flex;align-items:center;min-height:44px;padding-inline:2px;}
 .nav-links a:hover{color:var(--paper);}
+.nav-right{display:flex;align-items:center;gap:20px;}
+.nav-fs{display:inline-flex;align-items:center;flex:none;min-height:44px;padding-left:20px;
+  border-left:1px solid var(--line);opacity:0.72;transition:opacity .2s ease;}
+.nav-fs:hover,.nav-fs:focus-visible{opacity:1;}
+.nav-fs img{width:92px;height:auto;flex:none;}
+/* the mark keeps its size; the section links give way first, then the mark itself */
+@media (max-width:560px){.nav-right{gap:14px;}.nav-fs{padding-left:14px;}.nav-links a[href="#story"]{display:none;}}
+@media (max-width:399px){.nav-fs{display:none;}}
 
 .hero{position:relative;min-height:820px;display:flex;flex-direction:column;justify-content:flex-end;padding:140px 0 0;overflow:hidden;}
 .hero picture{position:absolute;inset:0;}
@@ -301,6 +309,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .story-lede .key{color:var(--accent-lite);}
 .story-body{margin-top:20px;font-size:17px;line-height:1.75;color:var(--paper-dim);max-width:60ch;}
 .story-body .title{color:var(--paper);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;font-size:16px;}
+.story-credit{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);max-width:60ch;
+  text-transform:uppercase;letter-spacing:0.18em;font-size:12px;color:var(--paper-dim);}
 @media (max-width:900px){
   .follow-grid{grid-template-columns:1fr;gap:32px;}
 }
@@ -474,10 +484,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="nav-mark" href="#top">The Sportscaster</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a class="label nav-extra" href="#story">Synopsis</a>
-      <a class="label nav-extra" href="#trailer">Trailer</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Primary">
+        <a class="label nav-extra" href="#story">Synopsis</a>
+        <a class="label nav-extra" href="#trailer">Trailer</a>
+      </nav>
+      <a class="nav-fs" href="https://www.fansided.com" target="_blank" rel="noopener"
+         aria-label="FanSided (opens in a new tab)">
+        <img src="assets/img/fansided.png" alt="FanSided" width="400" height="88" loading="lazy">
+      </a>
+    </div>
   </div>
 </header>
 
@@ -573,6 +589,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
           emerge, one Malcom has to answer for himself: what does it actually mean to make it, and who gets
           to decide when you have?
         </p>
+        <p class="story-credit">A FanSided documentary.</p>
       </div>
     </div>
   </section>
